@@ -66,6 +66,10 @@ body {
     margin: auto;
 }
 
+.ham-btn {
+    display: none;
+}
+
 .nav {
     margin-top: 30px;
     display: flex;
@@ -122,6 +126,9 @@ li:last-child {
     li {
         text-align: center;
     }
+    .perf-card:last-child {
+        display: none;
+    }
 }
 
 @media(max-width: 1340px) {
@@ -134,7 +141,7 @@ li:last-child {
         display: none;
     }
     .main-header {
-        width: 100%;
+        width: 92%;
         flex-wrap: wrap;
     }
     .main-header li {
@@ -146,6 +153,9 @@ li:last-child {
         margin-right: 10%;
     }
     .card-pict {
+        display: none;
+    }
+    .perf-card:nth-child(2) {
         display: none;
     }
 }
@@ -175,6 +185,31 @@ li:last-child {
         letter-spacing: 0.1em;
         text-transform: uppercase;
         text-decoration: underline;
+    }
+    .perf-card:nth-child(3) {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        display: none;
+    }
+    .about-text {
+        margin-top: 50px;
+    }
+    .numbers {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .numbers h4 {
+        text-align: right;
+    }
+    .ham-btn {
+        position: relative;
+        left: 5%;
+        display: block;
     }
 }
 
@@ -303,4 +338,36 @@ h1::first-letter {
 
 .numbers span {
     color: gold;
+}
+
+.performances {
+    left: 50%;
+    transform: translate(-50%, 60%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.performances p {
+    width: 420px;
+    height: 65px;
+    text-align: center;
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 65px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+}
+
+.performances span {
+    color: gold;
+}
+
+.perf-cards {
+    display: flex;
+    justify-content: center;
 }
