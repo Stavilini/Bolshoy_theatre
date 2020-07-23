@@ -6,9 +6,12 @@ body {
     background-color: #2E2E2E;
 }
 
+.m-container {}
+
 .m-container img {
-    position: absolute;
     display: block;
+    position: absolute;
+    z-index: -10;
 }
 
 .main-back {
@@ -115,6 +118,16 @@ li:last-child {
     margin-right: auto;
 }
 
+.main-text {
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 87px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
 @media(max-width: 1550px) {
     .main-description {
         margin-top: 10vh;
@@ -139,6 +152,9 @@ li:last-child {
     }
     .aside {
         display: none;
+    }
+    .slider {
+        transform: scale(0.8) translateY(-80px);
     }
     .main-header {
         width: 92%;
@@ -189,14 +205,14 @@ li:last-child {
     .perf-card:nth-child(3) {
         display: none;
     }
+    .main-text {
+        font-size: 44px !important;
+    }
 }
 
 @media (max-width: 768px) {
     .main-header {
         display: none;
-    }
-    .about-text {
-        margin-top: 50px;
     }
     .numbers {
         display: flex;
@@ -213,19 +229,15 @@ li:last-child {
     }
 }
 
-.text-description p {
-    color: white
+@media(max-width:576zpx) {
+    .main-text {
+        line-height: 40px !important;
+        font-size: 20px !important;
+    }
 }
 
-.main-text {
-    display: block;
-    font-family: Open Sans Condensed;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 64px;
-    line-height: 87px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+.text-description p {
+    color: white
 }
 
 .poster-btn {
@@ -277,6 +289,7 @@ p.about-theatre {
 }
 
 .about-text {
+    display: block;
     position: relative;
     left: 50%;
     transform: translate(-50%, 60%);
